@@ -1,0 +1,1328 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: sans-serif ,"Rubik";
+    scroll-behavior: smooth;
+}
+
+html,
+body{
+    overflow-x: hidden;
+}
+
+.light-theme{
+    --backgound-color: white;
+    --backgound-color-light-mode: #F9C22D;
+    --color-light-mode: black; 
+    --backgound-color-dark-mode: transparent;
+    --color-dark-mode: white; 
+    --color: black;
+    --box-shadow: 0px 0px 6px black;
+    --box-shadow-hover: 0 0 10px black;
+}
+
+.dark-theme{
+    --backgound-color: black;
+    --backgound-color-light-mode: transparent;
+    --color-light-mode: #F9C22D;
+    --backgound-color-dark-mode: white;
+    --color-dark-mode: black;  
+    --color: white;
+    --border: 2px solid #F9C22D;
+    --border-sec4img-width-query: 2px 2px 0 2px;
+    --border-sec4img-style-query: solid;
+    --border-sec4img-color-query: #F9C22D;
+    --border-sec4desc-width-query: 0 2px 2px 2px;
+    --border-sec4desc-style-query: solid;
+    --border-sec4desc-color-query: #F9C22D;
+    --border-sec4img-width: 2px 0 2px 2px;
+    --border-sec4img-style: solid;
+    --border-sec4img-color: #F9C22D;
+    --border-sec4desc-width: 2px 2px 2px 0;
+    --border-sec4desc-style: solid;
+    --border-sec4desc-color: #F9C22D;
+    --box-shadow: 0 0 6px #f9c32d8e;
+    --box-shadow-hover: 0 0 10px #f9c32d8e;
+    --border-sec2-width: 2px 0px 2px 0px;
+    --border-sec2-color: #F9C22D;
+    --border-sec2-style: solid;
+}
+
+.sec1{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./image/restaurant\ image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo{
+    border-radius: 50%;
+    width: 60px;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    transition: .3s ease;
+}
+.logo:hover{
+    border-radius: 10%;
+}
+
+.log-btns{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.log-in-btn{
+    margin-right: 5px;
+}
+
+.log-in-btn,
+.log-up-btn{
+    background-color: transparent;
+    color: white;
+    border: 2px solid #F9C22D;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .5s ease;
+}
+
+.log-in-btn:hover,
+.log-up-btn:hover{
+    background-color: #F9C22D;
+    color: black;
+    box-shadow: 0 0 6px #F9C22D;
+}
+
+.dark-button,
+.light-button{
+    font-size: 22px;
+    padding: 10px 12px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.dark-button{
+    background-color: var(--backgound-color-dark-mode);
+    color: var(--color-dark-mode);
+    border-color: white;
+    border-radius: 15% 0 0 15%;
+    border-width: 2px 0px 2px 2px;
+    margin-left: 18px;
+}
+
+.light-button{
+    background-color: var(--backgound-color-light-mode);
+    color: var(--color-light-mode);
+    border-radius: 0 15% 15% 0;
+    border-color: #F9C22D;
+    border-width: 2px 2px 2px 0;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    color: #eee;
+    filter: drop-shadow(-5px 5px 0px #484f58);
+}
+
+.text2{
+    color: #F9C22D;
+    font-size: 58px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    margin: -5px 0 20px 0;
+}
+
+.text3{
+    color: #eee;
+    font-size: 28px;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.order-now-btn{
+    background-color: transparent;
+    border: 2px solid #F9C22D;
+    color: #eee;
+    padding: 14px 25px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 40px;
+    box-shadow: 0 0 2px #F9C22D;
+    transition: .5s ease;
+}
+
+.order-now-btn:hover{
+    background-color: #F9C22D;
+    color: black;
+    box-shadow: 0 0 10px #F9C22D;
+}
+
+.social a{
+    color: white;
+    font-size: 2.5em;
+    transition: .5s ease;
+    margin: 50px 12px;
+}
+
+.social a:hover{
+    color: #ecb82b;
+}
+
+.sec2{
+    background-color: var(--backgound-color);
+}
+
+.sec2 div{
+    display: flex;
+}
+
+.all-about-us-img,
+.describtion {
+	width: 50%;
+    height: auto;
+}
+
+.describtion{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 6em 0 75px 50px;
+    border-width: var(--border-sec2-width);
+    border-color: var(--border-sec2-color);
+    border-style: var(--border-sec2-style);
+}
+
+.describtion-head-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: #F9C22D;
+}
+
+.describtion-text{
+    color: #eee;
+    font-size: 22px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-style: italic;
+    margin-top: 15px;
+    padding-right: 15px;
+    font-family: none;
+}
+
+.learn-more-btn{
+    background-color: #F9C22D;
+    color: black;
+    padding: 20px 0 20px 35px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 30px;
+    margin-top: 75px;
+    width: 10.8em;
+    display: flex;
+    align-items: center;
+    transition: .5s ease;
+}
+
+.arrow{
+    transition: .5s ease;
+    margin-left: 10px;
+}
+
+.learn-more-btn:hover .arrow{
+    margin-left: 20px;
+}
+
+.sec3{
+    background-color: var(--backgound-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    transition: .7s ease;
+}
+
+.what-we-sell-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--color);
+    text-align: center;
+}
+
+.cards{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card1,
+.card2,
+.card3{
+    margin: 20px;
+    background-color: black;
+    width: 350px;
+    padding-bottom: 30px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    transition: .7s ease;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover{
+    border-radius: 20px;
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.food-name{
+    font-size: 60px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    color: #F9C22D;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+.sec4{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--backgound-color);
+}
+
+.famous-food-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--color);
+    text-align: center;
+}
+
+.foods{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.food1,
+.food2,
+.food3{
+    display: flex;
+    transition: .7s ease;
+    margin-top: 20px;
+}
+
+.famous-food-img{
+    border-width: var(--border-sec4img-width);
+    border-style: var(--border-sec4img-style);
+    border-color: var(--border-sec4img-color);
+}
+
+.beef-burger-describtion,
+.chicken-burger-describtion,
+.pizza-describtion{
+    width: 700px;
+    height: 205px;
+    background-color: black;
+    transition: .7s ease;
+    padding-top: 20px;
+    padding-left: 30px;
+    border-width: var(--border-sec4desc-width);
+    border-style: var(--border-sec4desc-style);
+    border-color: var(--border-sec4desc-color);
+}
+
+.big-beef-burger-text,
+.big-chicken-burger-text,
+.pizza-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #ffad41;
+}
+
+.big-beef-burger-description,
+.big-chicken-burger-description,
+.pizza-margherita-description{
+    color: white;
+    font-size: 22px;
+    line-height: 25px;
+    margin-top: 10px;
+    font-family: 'Prompt', sans-serif;
+}
+
+.sale-famous-foods{
+    color: #F9C22D;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.del{
+    text-decoration: line-through;
+    font-size: 18px;
+    color: white;
+}
+
+.sec5{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--backgound-color);
+}
+
+.our-menu-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--color);
+    text-align: center;
+}
+
+.cards-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card-menu{
+    width: 348.33px;
+    height: 465px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    transition: .7s ease;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.card-menu:hover{
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.name-sale{
+    display: flex;
+    margin: 10px 8px 0 8px;
+}
+
+.burger-name{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    margin-right: 35px;
+}
+
+.sale-burger{
+    color: #F9C22D;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.burger-description{
+    color: white;
+    font-size: 15.5px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 10px 8px 0 8px;
+}
+
+.burger-info{
+    display: flex;
+    margin-top: 15px;
+}
+
+.burger-time-info,
+.burger-weight-info,
+.restaurant-location{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.burger-weight-info{
+    margin: 0 30px;
+}
+
+.burger-time,
+.burger-weight,
+.location{
+    color: white;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.time-logo,
+.weight-logo,
+.location-logo{
+    margin-right: 8px;
+}
+
+.order-btn{
+    background-color: #F9C22D;
+    color: black;
+    padding: 14px 24px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 18px;
+    margin-top: 30px;
+    transition: .5s ease;
+}
+
+.order-btn:hover{
+    padding: 14px 35px;
+}
+
+.sec6{
+    padding-bottom: 100px;
+    padding-top: 50px;
+    background-color: var(--backgound-color);
+}
+
+.our-chefs-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--color);
+    text-align: center;
+}
+
+.chefs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.image-container,
+.image-container1,
+.image-container2{
+    background-size: cover;
+    width: 360px;
+    height: 500px;
+    overflow: hidden;
+    margin: 20px 0 20px 0;
+    background-position: center;
+}
+
+.image-container{
+    background-image: url("./image/Knead\ &\ Know\ _\ A\ Croissant-Making\ Class\ and\ a\ Giveaway\ -\ A\ Daily\ Something.png");
+}
+
+.image-container1{
+    background-image: url("./image/Isaac Carew recipes_ The chef that's about to get your appetite all shook up - YOU Magazine.jpg");
+}
+
+.image-container2{
+    background-image: url("./image/15 Lessons from 20 Years of the French Laundry.jpg");
+}
+
+.image-container:hover .links,
+.image-container1:hover .links,
+.image-container2:hover .links {
+    margin-left: 15px;
+}
+  
+.links {
+    transition: .5s ease ;
+    display: flex;
+    flex-direction: column;
+    margin-left: -60px;
+    margin-top: 15px;
+}
+  
+.links a {
+    margin-top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 3px #eee);
+    background-color: white;
+    border-radius: 10px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.image-container:hover{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./image/Knead\ &\ Know\ _\ A\ Croissant-Making\ Class\ and\ a\ Giveaway\ -\ A\ Daily\ Something.png");
+}
+
+.image-container1:hover{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./image/Isaac\ Carew\ recipes_\ The\ chef\ that\'s\ about\ to\ get\ your\ appetite\ all\ shook\ up\ -\ YOU\ Magazine.jpg");
+}
+
+.image-container2:hover{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./image/15\ Lessons\ from\ 20\ Years\ of\ the\ French\ Laundry.jpg");
+}
+
+.sec7{
+    background-color: black;
+    padding-bottom: 100px;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-text{
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.info-about-me{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 75px;
+    margin-right: 40px;
+}
+
+.phone,
+.email-info,
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 35px;
+}
+
+.phone-icon,
+.email-icon,
+.time-icon{
+    font-size: 40px;
+}
+
+.phone-text,
+.email-text,
+.time-text{
+    color: #F9C22D;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.phone-number,
+.my-email,
+.time-clock{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 10px;
+    text-transform: none;
+}
+
+hr {
+    border: 1px solid #F9C22D;
+}  
+
+.contact-background{
+    margin-top: 100px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-text{
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    color: #F9C22D;
+}
+
+form{
+    margin-top: 20px;
+}
+
+.input-name,
+.input-email,
+.input-phone{
+    padding-bottom: 10px;
+    margin-top: 50px;
+    width: 500px;
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    border: solid white;
+    border-width: 0px 0px 1px 0px;
+}
+
+::placeholder {
+    color: white;
+}
+
+.button{
+    background-color: #F9C22D;
+    border-radius: 30px; 
+    width: 155px;
+    padding: 15px 35px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    margin-top: 75px;
+    transition: .5s ease;
+    box-shadow: 0 0 4px #F9C22D;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #F9C22D;
+}
+
+@media(max-width:1000px) {    
+    .beef-burger-describtion,
+    .chicken-burger-describtion,
+    .pizza-describtion{
+        width: 500px;
+        height: 160px;
+    }
+
+    .famous-food-img{
+        width: 170px;
+    }
+    
+    .big-beef-burger-text,
+    .big-chicken-burger-text,
+    .pizza-text{
+        font-size: 18px;
+    }
+    
+    .big-beef-burger-description,
+    .big-chicken-burger-description,
+    .pizza-margherita-description{
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    .sale-famous-foods{
+        font-size: 20px;
+    }
+    
+    .del{
+        font-size: 10px;
+    }
+
+    .sec2{
+        padding-bottom: 50px;
+    }
+
+    .sec2 div{
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .all-about-us-img,
+    .describtion {
+        width: 75%;
+    }
+    
+    .all-about-us-img{
+        margin-top: 50px;
+        border-width: var(--border-sec4img-width-query);
+        border-color: var(--border-sec4img-color-query);
+        border-style: var(--border-sec4img-style-query);
+    }
+
+    .describtion{
+        padding: 4em 0 4em 0px;
+        border-width: var(--border-sec4desc-width-query);
+        border-color: var(--border-sec4desc-color-query);
+        border-style: var(--border-sec4desc-style-query);
+    }
+    
+    .describtion-head-text{
+        font-size: 50px;
+    }
+    
+    .describtion-text{
+        text-align: center;
+        font-size: 20px;
+        padding: 0 30px;
+    }
+    
+    .learn-more-btn{
+        padding: 20px 0 20px 28px;
+        font-size: 18px;
+        margin-top: 30px;
+        width: 10em;
+    }
+
+    .learn-more-btn:hover .arrow{
+        margin-left: 18px;
+    }
+}
+
+@media(max-width:815px) {
+    .info-text{
+        font-size: 50px;
+    }
+    
+    .phone,
+    .email-info,
+    .time{
+        padding: 0 25px;
+    }
+    
+    .phone-icon,
+    .email-icon,
+    .time-icon{
+        font-size: 30px;
+    }
+    
+    .phone-text,
+    .email-text,
+    .time-text{
+        font-size: 18px;
+    }
+    
+    .phone-number,
+    .my-email,
+    .time-clock{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:745px) {
+    header{
+        padding: 10px 10px 0px 20px;
+    }
+
+    .dark-button{
+        margin-left: 10px;
+    }
+
+    .log-in-btn,
+    .log-up-btn{
+        font-size: 13px;
+    }
+
+    .dark-button,
+    .light-button{
+        font-size: 20px;
+    }
+
+    .text1{
+        font-size: 60px;
+    }
+    
+    .text2{
+        font-size: 50px;
+    }
+    
+    .text3{
+        font-size: 25px;
+    }
+    
+    .order-now-btn{
+        width: 145px;
+        font-size: 15px;
+    }
+
+    .social a{
+        font-size: 2em;
+    }
+
+    .what-we-sell-text{
+        font-size: 50px;
+    }
+
+    .famous-food-text{
+        font-size: 50px;
+    }
+    
+    .food1,
+    .food2,
+    .food3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .beef-burger-describtion,
+    .chicken-burger-describtion,
+    .pizza-describtion{
+        width: 80%;
+        height: 100%;
+        padding: 20px 20px 15px 20px;
+        border-width: var(--border-sec4desc-width-query);
+        border-style: var(--border-sec4desc-style-query);
+        border-color: var(--border-sec4desc-color-query);
+    }
+
+    .famous-food-img{
+        width: 80%;
+        border-width: var(--border-sec4img-width-query);
+        border-style: var(--border-sec4img-style-query);
+        border-color: var(--border-sec4img-color-query);
+    }
+    
+    .big-beef-burger-text,
+    .big-chicken-burger-text,
+    .pizza-text{
+        font-size: 15px;
+    }
+    .our-menu-text{
+        font-size: 50px;
+    }
+
+    .our-chefs-text{
+        font-size: 50px;
+    }
+}
+
+@media(max-width:640px) {
+    .all-about-us-img,
+    .describtion {
+        width: 80%;
+    }
+
+    .describtion{
+        padding: 3em 0 3em 0px;
+    }
+    
+    .describtion-head-text{
+        font-size: 35px;
+    }
+    
+    .describtion-text{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        word-spacing: 0px;
+        padding: 0 20px;
+    }
+    
+    .learn-more-btn{
+        padding: 20px 0 20px 27px;
+        font-size: 14px;
+        width: 11em;
+    }
+
+    .learn-more-btn:hover .arrow{
+        margin-left: 15px;
+    }
+
+    .phone,
+    .email-info,
+    .time{
+        padding: 0 15px;
+    }
+    
+    .phone-icon,
+    .email-icon,
+    .time-icon{
+        font-size: 25px;
+    }
+    
+    .phone-text,
+    .email-text,
+    .time-text{
+        font-size: 15px;
+    }
+    
+    .phone-number,
+    .my-email,
+    .time-clock{
+        font-size: 12px;
+    }
+
+    .contact-background{
+        margin-top: 50px;
+        width: 70%;
+    }
+    
+    .contact-text{
+        font-size: 40px;
+    }
+    
+    form{
+        margin-top: 0;
+        width: 100%;
+    }
+    
+    .input-name,
+    .input-email,
+    .input-phone{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .button{
+        width: 132px;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:480px) {
+    .logo{
+        width: 50px;
+    }
+
+    .log-in-btn,
+    .log-up-btn{
+        display: none;
+    }
+
+    .dark-button,
+    .light-button{
+        font-size: 20px;
+        padding: 10px 10px;
+    }
+
+    .text1{
+        font-size: 50px;
+    }
+    
+    .text2{
+        font-size: 40px;
+    }
+    
+    .text3{
+        font-size: 22px;
+        margin-top: 12px;
+    }
+
+    .all-about-us-img,
+    .describtion {
+        width: 85%;
+    }
+
+    .describtion{
+        padding: 2em 0 2em 0px;
+    }
+    
+    .describtion-head-text{
+        font-size: 25px;
+    }
+    
+    .describtion-text{
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        padding: 0 15px;
+    }
+    
+    .learn-more-btn{
+        padding: 18px 0 18px 24px;
+        font-size: 12px;
+    }
+
+    .order-now-btn{
+        width: 132px;
+        font-size: 16px;
+        padding: 15px 22px;
+        margin-top: 30px;
+    }
+
+    .social a{
+        margin: 35px 8px;
+    }
+    
+    .what-we-sell-text{
+        font-size: 40px;
+    }
+    
+    .card1,
+    .card2,
+    .card3{
+        width: 80%;
+    }
+    
+    .food-name{
+        font-size: 40px;
+    }
+
+    .famous-food-text{
+        font-size: 40px;
+    }
+    
+    .our-menu-text{
+        font-size: 40px;
+    }
+    
+    .card-menu{
+        width: 70%;
+        height: 445px;
+    }
+
+    .name-sale{
+        margin-top: 20px;
+    }
+
+    .burger-name{
+        font-size: 22px;
+    }
+    
+    .sale-burger{
+        font-size: 22px;
+    }
+    
+    .burger-description{
+        font-size: 13.9px;
+    }
+    
+    .burger-time-info,
+    .burger-weight-info,
+    .restaurant-location{
+        font-size: 17px;
+    }
+
+    .order-btn{
+        padding: 18px 25px;
+        font-size: 18px;
+    }
+
+    .order-btn:hover{
+        padding: 18px 75px;
+    }
+    
+    .our-chefs-text{
+        font-size: 40px;
+    }
+    
+    .image-container,
+    .image-container1,
+    .image-container2{
+        width: 70%;
+        height: 500px;
+
+    }
+
+    .info-text{
+        font-size: 40px;
+    }
+    
+    .info-about-me{
+        flex-direction: column;
+        margin-right: 0;
+        margin-top: 50px;
+    }
+    
+    .phone,
+    .email-info,
+    .time{
+        padding: 30px 15px;
+    }
+    
+    .phone-icon,
+    .email-icon,
+    .time-icon{
+        font-size: 30px;
+    }
+    
+    .phone-text,
+    .email-text,
+    .time-text{
+        font-size: 18px;
+    }
+    
+    .phone-number,
+    .my-email,
+    .time-clock{
+        font-size: 15px;
+    }
+    
+    .contact-background{
+        width: 80%;
+    }
+    
+    .contact-text{
+        font-size: 35px;
+    }
+    
+    .input-name,
+    .input-email,
+    .input-phone{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:420px) {
+    .card-menu{
+        height: 415px;
+    }
+
+    .name-sale{
+        margin-top: 25px;
+    }
+
+    .burger-name{
+        font-size: 18px;
+    }
+    
+    .sale-burger{
+        font-size: 18px;
+    }
+    
+    .burger-description{
+        font-size: 11.7px;
+    }
+    
+    .burger-time-info,
+    .burger-weight-info,
+    .restaurant-location{
+        font-size: 13.2px;
+    }
+
+    .order-btn{
+        padding: 15px 22px;
+        font-size: 14px;
+    }
+
+    .order-btn:hover{
+        padding: 15px 75px;
+    }
+}
+
+@media(max-width:385px) {
+    .logo{
+        width: 45px;
+    }
+
+    .log-btns{
+        top: 10px;
+    }
+
+    .dark-button,
+    .light-button{
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+
+    .text1{
+        font-size: 45px;
+    }
+    
+    .text2{
+        font-size: 35px;
+    }
+    
+    .text3{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .order-now-btn{
+        width: 124px;
+        font-size: 15px;
+        padding: 14px 20px;
+    }
+
+    .social a{
+        margin: 30px 6px;
+        font-size: 1.8em;
+    }
+
+    .card-menu{
+        width: 82%;
+        height: 420px;
+    }
+
+    .burger-name{
+        font-size: 19.5px;
+    }
+    
+    .sale-burger{
+        font-size: 19px;
+    }
+    
+    .burger-description{
+        font-size: 12.5px;
+    }
+    
+    .burger-time-info,
+    .burger-weight-info,
+    .restaurant-location{
+        font-size: 14px;
+    }
+
+    .order-btn{
+        padding: 16px 25px;
+    }
+
+    .order-btn:hover{
+        padding: 16px 75px;
+    }
+}
+
+@media(max-width:350px) {
+    .card-menu{
+        width: 85%;
+        height: 420px;
+    }
+
+    .burger-name{
+        font-size: 18.6px;
+    }
+    
+    .sale-burger{
+        font-size: 17.7px;
+    }
+    
+    .burger-description{
+        font-size: 12px;
+    }
+    
+    .burger-time-info,
+    .burger-weight-info,
+    .restaurant-location{
+        font-size: 13px;
+    }
+
+    .order-btn{
+        font-size: 13px;    
+    }
+}
